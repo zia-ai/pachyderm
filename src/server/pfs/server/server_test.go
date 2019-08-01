@@ -5258,7 +5258,7 @@ func TestFuzzProvenance(t *testing.T) {
 	client := GetPachClient(t)
 	_, err := client.PfsAPIClient.DeleteAll(client.Ctx(), &types.Empty{})
 	require.NoError(t, err)
-	nOps := 300
+	nOps := 500
 	opShares := []int{
 		1, // inputRepo
 		1, // inputBranch
