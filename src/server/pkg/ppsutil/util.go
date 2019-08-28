@@ -256,6 +256,7 @@ func PipelineReqFromInfo(pipelineInfo *ppsclient.PipelineInfo) *ppsclient.Create
 		Salt:               pipelineInfo.Salt,
 		PodSpec:            pipelineInfo.PodSpec,
 		PodPatch:           pipelineInfo.PodPatch,
+		Labels:             pipelineInfo.Labels,
 	}
 }
 

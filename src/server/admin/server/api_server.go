@@ -321,6 +321,7 @@ func pipelineInfoToRequest(pi *pps.PipelineInfo) *pps.CreatePipelineRequest {
 		JobTimeout:         pi.JobTimeout,
 		PodPatch:           pi.PodPatch,
 		PodSpec:            pi.PodSpec,
+		Labels:             pi.Labels,
 	}
 }
 

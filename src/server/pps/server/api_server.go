@@ -44,12 +44,12 @@ import (
 
 	"github.com/gogo/protobuf/jsonpb"
 	"github.com/gogo/protobuf/types"
-	logrus "github.com/sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 
 	"golang.org/x/sync/errgroup"
 
-	opentracing "github.com/opentracing/opentracing-go"
+	"github.com/opentracing/opentracing-go"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/resource"
@@ -1882,6 +1882,7 @@ func (a *apiServer) CreatePipeline(ctx context.Context, request *pps.CreatePipel
 		SchedulingSpec:   request.SchedulingSpec,
 		PodSpec:          request.PodSpec,
 		PodPatch:         request.PodPatch,
+		Labels:           request.Labels,
 	}
 	if err := setPipelineDefaults(pipelineInfo); err != nil {
 		return nil, err
