@@ -254,6 +254,7 @@ func PipelineReqFromInfo(pipelineInfo *ppsclient.PipelineInfo) *ppsclient.Create
 		DatumTimeout:       pipelineInfo.DatumTimeout,
 		JobTimeout:         pipelineInfo.JobTimeout,
 		Salt:               pipelineInfo.Salt,
+		Standby:            pipelineInfo.Standby,
 		PodSpec:            pipelineInfo.PodSpec,
 		PodPatch:           pipelineInfo.PodPatch,
 		Labels:             pipelineInfo.Labels,
