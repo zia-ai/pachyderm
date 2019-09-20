@@ -418,6 +418,9 @@ message PipelineInfo {
   SchedulingSpec scheduling_spec = 40;
   string pod_spec = 41;
   string pod_patch = 44;
+
+  // Labels that can be used to filter pipelines and to represent user-defined metadata
+  map<string, string> labels = 46;
 }
 
 message PipelineInfos {
@@ -606,6 +609,7 @@ message CreatePipelineRequest {
   SchedulingSpec scheduling_spec = 29;
   string pod_spec = 30; // deprecated, use pod_patch below
   string pod_patch = 32; // a json patch will be applied to the pipeline's pod_spec before it's created;
+  map<string, string> labels = 34;
 }
 
 message InspectPipelineRequest {
